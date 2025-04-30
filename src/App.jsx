@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './App.css'
-import {InputBox} from './components '
-import {useCurrencyInfo} from './hooks/useCurrencyInfo'
+import {InputBox} from './components'
+import useCurrencyInfo from './hooks/useCurrencyInfo'
 
 function App() {
 
@@ -27,7 +27,7 @@ function App() {
     <div
         className="w-full h-screen flex flex-wrap justify-center items-center bg-cover bg-no-repeat"
         style={{
-            backgroundImage: `url('https://png.pngtree.com/thumb_back/fh260/background/20240801/pngtree-falling-money-abstract-background-for-finance-and-success-image_16123416.jpg')`,
+          backgroundImage: `url('https://images.pexels.com/photos/3532540/pexels-photo-3532540.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')`,
         }}
     >
         <div className="w-full">
@@ -43,8 +43,9 @@ function App() {
                             label="From"
                             amount={amount}
                             currencyOptions={options}
-                            onCurrencyChange={(currency)=>setAmount(amount)}
-                            selectCurrency = {from}
+                            onCurrencyChange={(currency)=>setFrom(currency)}
+                            selectCurrency={from}
+                            onAmountChange={(amount)=>setAmount(amount)}
                         />
                     </div>
                     <div className="relative w-full h-0.5">
